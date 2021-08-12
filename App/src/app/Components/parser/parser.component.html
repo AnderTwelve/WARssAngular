@@ -1,0 +1,26 @@
+<div>
+    <input type = "text" [(ngModel)] = "rssUrl">
+    <button (click) = "getFeed()" (click) = "displayFeed()">Search </button> 
+</div>
+
+<h1>{{content.title}}</h1>
+<p>{{content.description}}</p>
+<table *ngFor="let entry of content.entries">
+    <tr>
+        <td>
+            Link:
+        </td>
+        <td>{{entry.link}}</td>
+    </tr>
+    <tr>
+        <td>
+            Author:
+        </td>
+        <td>
+            {{entry.author}}
+        </td>
+    </tr>
+    <br>
+
+
+</table>
